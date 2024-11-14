@@ -1,0 +1,381 @@
+
+
+/* Botón de búsqueda */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    display: block; /* Hace que el input sea un bloque */
+    margin-left: auto;
+    margin-right: auto; /* Centra el input */
+}
+
+
+/* Tabla */
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #ff6600;
+    color: white;
+}
+
+td {
+    background-color: #fffaf0;
+}
+
+tr:hover {
+    background-color: #ffedcc;
+}
+
+/* Lista ordenada y desordenada */
+ol, ul {
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+/* Estilos para el iframe de Google Maps */
+iframe {
+    border: 2px solid #ff6600;
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+}
+
+/* Estilos para la sección de redes sociales */
+.only-desktop {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 0 10px;
+}
+
+ul li a {
+    color: #ff6600;
+    font-weight: bold;
+}
+h2 {
+    text-decoration: none !important;
+    font-size: 24px;
+    color: #ff6600;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Estilos para la sección de categorías */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li {
+    width: 45%; /* Ajusta el ancho para que las columnas se vean balanceadas */
+    margin-bottom: 30px;
+    position: relative; /* Para posicionar el texto encima de la imagen */
+}
+
+li a {
+    text-decoration: none;
+    color: #fff; /* Color del texto blanco */
+}
+
+li img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho del contenedor */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+li p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%; /* Ajusta el ancho del texto para que abarque el ancho de la imagen */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no altere el ancho */
+}
+/* Contenedor principal para centrar la sección */
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Estilos para los productos */
+.producto {
+    width: 100%; /* Cada producto ocupa todo el ancho de su columna */
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #fffaf0;
+}
+
+.producto img {
+    width: 70%; /* La imagen ocupa todo el ancho del contenedor del producto */
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contenedor de la cuadrícula */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas según el espacio disponible */
+    gap: 20px;
+    width: 80%; /* El contenedor ocupa el 80% del ancho de la página */
+}
+
+h3 {
+    color: #333;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+a {
+    color: #ff6600;
+    font-weight: bold;
+    text-decoration: none;
+}
+.catalogo-redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0; /* Agrega margen arriba y abajo */
+}
+
+.catalogo-redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0; /* Agrega margen arriba y abajo */
+}
+
+.catalogo, .redes {
+    width: 45%; /* Ocupan aproximadamente la mitad de la pantalla cada una */
+    text-align: center; /* Centra el texto de ambos elementos */
+}
+
+.catalogo h2 {
+    font-size: 1.2em; /* Aumenta el tamaño de fuente del título */
+    margin-bottom: 1.2em; /* Agrega margen inferior al título */
+}
+
+.catalogo p {
+    font-size: 1em; /* Ajusta el tamaño de fuente del párrafo */
+    margin-bottom: 10px; /* Agrega margen inferior al párrafo */
+}
+
+.redes p, .redes {
+    font-size: 1em; /* Ajusta el tamaño de fuente del párrafo */
+    text-align: center; /* Centra los elementos de la lista */
+
+    margin-bottom: 10px; /* Agrega margen inferior al párrafo */
+}
+
+.redes ul {
+    list-style: none; /* Elimina las viñetas de la lista */
+    padding:0; /* Elimina el relleno de la lista */
+    margin: 0; /* Elimina el margen de la lista */
+    text-align: center; /* Centra los elementos de la lista */
+}
+
+.icono {
+    width: 50px; /* Tamaño uniforme para ambas imágenes */
+    height: 50px;
+    display: inline-block; /* Hace que los elementos de la lista se alineen horizontalmente */
+    vertical-align: middle;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+.redes li {
+    display: inline-block; /* Hace que los elementos de la lista se alineen horizontalmente */
+    margin: 0 10px; /* Agrega margen entre los íconos */
+}
+
+
+.catalogo img {
+    width: 10%; /* Ajusta el ancho de la imagen al contenedor */
+    max-width: 70px; /* Define un ancho máximo para la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    display: block; /* Para que la imagen ocupe todo el ancho del contenedor */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    margin-bottom: 10px; /* Agrega margen inferior a la imagen */
+}
+.catalogo a:hover img, .redes a:hover img {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+    transition: transform 0.3s ease; /* Suaviza el cambio de tamaño */
+}
+/* Fondo de la página */
+body {
+    background-color: #f0f0f0; /* Color gris claro */
+    font-family: Arial, sans-serif; /* Cambia la fuente aquí si deseas */
+}
+
+/* Contenedor del encabezado */
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #e0e0e0; /* Fondo gris */
+}
+
+/* Imagen alineada a la izquierda */
+.encabezado img {
+    align-self: flex-start; /* Alinea la imagen en la esquina superior izquierda */
+    margin-right: 10px;
+}
+
+/* Texto centrado */
+.titulo {
+    text-align: center;
+}
+
+/* Estilo del título principal y subtítulo */
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin: 5px 0 20px;
+}
+
+/* Estilo para las marcas */
+ul.marcas {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+ul.marcas li {
+    display: inline;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #0e0e0e; /* Color de las marcas */
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Estilo para la sección de ubicación */
+.seccion-ubicacion {
+    background-color: #f7f7f7; /* Fondo gris claro para destacar la sección */
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.seccion-ubicacion h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.seccion-ubicacion iframe {
+    max-width: 100%;
+    border: 2px solid #ddd; /* Borde gris claro alrededor del mapa */
+    border-radius: 10px; /* Bordes redondeados para mejor apariencia */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+footer {
+    background-color: #f0f0f0; /* Color gris claro */
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555; /* Color del texto */
+}
+
+footer p {
+    margin: 0;
+}
+footer {
+    background-color: #f0f0f0; /* Color gris claro */
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555; /* Color del texto */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .contact-info {
+    margin-top: 10px;
+}
+
+footer a {
+    color: #ff6600; /* Color del enlace, para destacar */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.marcas li a {
+    color: #08080899; /* Color personalizado para enlaces */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.marcas li a:hover {
+    text-decoration: underline;
+}
+
