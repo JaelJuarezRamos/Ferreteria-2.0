@@ -83,21 +83,13 @@ ul li a {
     font-weight: bold;
 }
 h2 {
-    text-decoration: none !important;
-    font-size: 24px;
-    color: #ff6600;
-    font-weight: bold;
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 20px;
+    color: #ff6600;
 }
-/* Estilos para la sección de categorías */
-h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
+
 
 ol {
     list-style: none;
@@ -259,6 +251,7 @@ a {
 }
 /* Fondo de la página */
 body {
+    margin: 0;
     background-color: #f0f0f0; /* Color gris claro */
     font-family: Arial, sans-serif; /* Cambia la fuente aquí si deseas */
 }
