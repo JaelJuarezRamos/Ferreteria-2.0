@@ -1,0 +1,29 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.cart {
+    width: 150px;
+    height: 150px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: grab;
+    transition: transform 0.1s ease-out;
+    user-select: none;
+}
+.cart:active {
+    cursor: grabbing;
+}
+

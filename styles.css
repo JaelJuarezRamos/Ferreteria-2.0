@@ -1,314 +1,149 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --color-primario: #fbeded;
+    --color-secundario: #333;
+    --color-hover: #ff6600;
+    --color-fondo: #f4b14c77;
+    --color-texto-hover: #817b78;
+    --fuente-principal: Arial, sans-serif;
+}
 
+/* Transición global */
+* {
+    transition: all 0.3s ease;
+}
 
-/* Botón de búsqueda */
-input[type="text"] {
+/* Estilo base para el cuerpo */
+body {
+    margin: 2.5rem;
+    background-color: var(--color-primario);
+    font-family: var(--fuente-principal);
+    color: var(--color-secundario);
+    line-height: 1.9;
+    display: flex;
+    flex-direction: column;
+}
+.titulo {
+    position: relative;
+    text-align: center;
+    background-image: url('./img/DALL·E 2024-12-12 21.21.21 - An abstract design representing a hardware store. The image should feature geometric shapes and textures that symbolize tools, hardware, and construct.webp');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Texto blanco para que contraste con el fondo */
+    padding: 90px;
+}
+
+.titulo h1 {
+    position: relative; /* Asegura que esté sobre el fondo */
+    font-size: 2rem;
+    margin: 10px 0;
+    z-index: 1; /* Mantén el texto sobre el fondo */
+    color: white;
+}
+
+.titulo input[type="text"] {
+    position: relative;
+    z-index: 1; /* Mantén el campo sobre el fondo */
     padding: 10px;
-    border: 2px solid #ff6600;
     border-radius: 5px;
-    margin-top: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 400px;
+}
+
+.titulo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 300px;
-    display: block; /* Hace que el input sea un bloque */
-    margin-left: auto;
-    margin-right: auto; /* Centra el input */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Añade un filtro oscuro */
+    z-index: 0; /* Asegura que el filtro esté detrás del contenido */
 }
 
 
-/* Tabla */
-table {
-    width: 50%;
-    border-collapse: collapse;
-    margin-top: 20px;
+h1 {
+    font-size: 2.5em;
+    color: var(--color-secundario);
+    margin: 0 0 10px;
+}
+/* Botón de búsqueda */
+input[type="text"] {
+    padding: 15px;
+    border: 3px solid #6b6866;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-family: var(--fuente-principal);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #ff6600;
+    background-color: #f89f64;
     color: white;
-}
-
-td {
-    background-color: #fffaf0;
 }
 
 tr:hover {
     background-color: #ffedcc;
 }
 
-/* Lista ordenada y desordenada */
-ol, ul {
-    padding-left: 20px;
-}
-
+/* Lista */
 li {
-    margin: 5px 0;
-}
-
-/* Estilos para el iframe de Google Maps */
-iframe {
-    border: 2px solid #ff6600;
-    border-radius: 5px;
-    width: 100%;
-    height: 300px;
-}
-
-/* Estilos para la sección de redes sociales */
-.only-desktop {
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
-}
-
-ul {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 }
 
-ul li {
-    margin: 0 10px;
-}
-
-ul li a {
-    color: #ff6600;
-    font-weight: bold;
-}
-h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #ff6600;
-}
-
-
-ol {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Estilos para iframe (Google Maps) */
+.iframe-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-li {
-    width: 45%; /* Ajusta el ancho para que las columnas se vean balanceadas */
-    margin-bottom: 30px;
-    position: relative; /* Para posicionar el texto encima de la imagen */
-}
-
-li a {
-    text-decoration: none;
-    color: #fff; /* Color del texto blanco */
-}
-
-li img {
-    width: 100%; /* Las imágenes ocuparán todo el ancho del contenedor */
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
-
-li p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente negro */
-    padding: 10px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    width: 100%; /* Ajusta el ancho del texto para que abarque el ancho de la imagen */
-    text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no altere el ancho */
-}
-/* Contenedor principal para centrar la sección */
-.container {
-    display: flex;
     justify-content: center;
-    width: 100%;
-}
-
-/* Estilos para los productos */
-.producto {
-    width: 100%; /* Cada producto ocupa todo el ancho de su columna */
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    background-color: #fffaf0;
-}
-
-.producto img {
-    width: 70%; /* La imagen ocupa todo el ancho del contenedor del producto */
-    height: auto;
-    border-radius: 5px;
-}
-
-/* Contenedor de la cuadrícula */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta el número de columnas según el espacio disponible */
     gap: 20px;
-    width: 80%; /* El contenedor ocupa el 80% del ancho de la página */
+    margin-top: 50px;
 }
 
-h3 {
-    color: #333;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-p {
-    font-size: 14px;
-    color: #555;
-    margin: 10px 0;
-}
-
-a {
-    color: #ff6600;
-    font-weight: bold;
-    text-decoration: none;
-}
-.catalogo-redes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0; /* Agrega margen arriba y abajo */
-}
-
-.catalogo-redes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0; /* Agrega margen arriba y abajo */
-}
-
-.catalogo, .redes {
-    width: 45%; /* Ocupan aproximadamente la mitad de la pantalla cada una */
-    text-align: center; /* Centra el texto de ambos elementos */
-}
-
-.catalogo h2 {
-    font-size: 1.2em; /* Aumenta el tamaño de fuente del título */
-    margin-bottom: 1.2em; /* Agrega margen inferior al título */
-}
-
-.catalogo p {
-    font-size: 1em; /* Ajusta el tamaño de fuente del párrafo */
-    margin-bottom: 10px; /* Agrega margen inferior al párrafo */
-}
-
-.redes p, .redes {
-    font-size: 1em; /* Ajusta el tamaño de fuente del párrafo */
-    text-align: center; /* Centra los elementos de la lista */
-
-    margin-bottom: 10px; /* Agrega margen inferior al párrafo */
-}
-
-.redes ul {
-    list-style: none; /* Elimina las viñetas de la lista */
-    padding:0; /* Elimina el relleno de la lista */
-    margin: 0; /* Elimina el margen de la lista */
-    text-align: center; /* Centra los elementos de la lista */
-}
-
-.icono {
-    width: 50px; /* Tamaño uniforme para ambas imágenes */
-    height: 50px;
-    display: inline-block; /* Hace que los elementos de la lista se alineen horizontalmente */
-    vertical-align: middle;
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
-}
-.redes li {
-    display: inline-block; /* Hace que los elementos de la lista se alineen horizontalmente */
-    margin: 0 10px; /* Agrega margen entre los íconos */
-}
-
-
-.catalogo img {
-    width: 10%; /* Ajusta el ancho de la imagen al contenedor */
-    max-width: 70px; /* Define un ancho máximo para la imagen */
-    height: auto; /* Ajusta la altura automáticamente */
-    display: block; /* Para que la imagen ocupe todo el ancho del contenedor */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    margin-bottom: 10px; /* Agrega margen inferior a la imagen */
-}
-.catalogo a:hover img, .redes a:hover img {
-    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
-    transition: transform 0.3s ease; /* Suaviza el cambio de tamaño */
-}
-/* Fondo de la página */
-body {
+iframe {
+    border: none;
     margin: 0;
-    background-color: #f0f0f0; /* Color gris claro */
-    font-family: Arial, sans-serif; /* Cambia la fuente aquí si deseas */
+    border-radius: 10px;
+    transform: scale(0.9);
+    cursor: pointer;
+    flex: 0 0 auto;
 }
 
-/* Contenedor del encabezado */
-.encabezado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    background-color: #e0e0e0; /* Fondo gris */
-}
 
-/* Imagen alineada a la izquierda */
-.encabezado img {
-    align-self: flex-start; /* Alinea la imagen en la esquina superior izquierda */
-    margin-right: 10px;
-}
-
-/* Texto centrado */
-.titulo {
+/* Estilos para secciones de productos y catálogo */
+h2, h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
     text-align: center;
 }
 
-/* Estilo del título principal y subtítulo */
-h1 {
-    font-size: 2.5em;
-    color: #333;
-    margin: 0;
-}
 
-h2 {
-    font-size: 1.8em;
-    color: #555;
-    margin: 5px 0 20px;
-}
-
-/* Estilo para las marcas */
-ul.marcas {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin-top: 10px;
-}
-
-ul.marcas li {
-    display: inline;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #0e0e0e; /* Color de las marcas */
-    margin: 0 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-/* Estilo para la sección de ubicación */
+/* Estilo de la sección de ubicación */
 .seccion-ubicacion {
-    background-color: #f7f7f7; /* Fondo gris claro para destacar la sección */
+    background-color: #ede6e6;
     padding: 20px;
     text-align: center;
     margin-top: 30px;
@@ -316,59 +151,289 @@ ul.marcas li {
 
 .seccion-ubicacion h2 {
     font-size: 2em;
-    color: #333;
+    color: var(--color-secundario);
     margin-bottom: 15px;
 }
 
 .seccion-ubicacion iframe {
     max-width: 100%;
-    border: 2px solid #ddd; /* Borde gris claro alrededor del mapa */
-    border-radius: 10px; /* Bordes redondeados para mejor apariencia */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-footer {
-    background-color: #f0f0f0; /* Color gris claro */
+
+
+/* Estilo para productos */
+.producto img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform o.3s ease filter 0.3s ease;
+    
+}
+.producto img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+    filter: brightness(1.2); /* Incrementa el brillo */
+    color: #6b6866;
+}
+/* Listas de productos (cartas) */
+ol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+    list-style: none;
+    text-align: center;
+}
+
+/* Tarjetas */
+ol li {
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+ol li:hover {
+    transform: translateY(-5px);
+    border: 2px solid var(--color-hover);
+}
+
+ol li img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 2px solid var(--color-hover);
+}
+
+ol li p {
+    font-size: 1.8em;
+    line-height: 1.5;
+    margin: 50px 0 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ol li a {
+    color: var(--color-texto-hover);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+    justify-content: center;
     padding: 20px;
     text-align: center;
-    font-size: 14px;
-    color: #555; /* Color del texto */
+    text-transform: uppercase;
+  
 }
 
-footer p {
-    margin: 0;
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px;
 }
-footer {
-    background-color: #f0f0f0; /* Color gris claro */
-    padding: 20px;
+
+/* Estilo para la lista de marcas */
+.marcas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las marcas se acomoden en varias filas si es necesario */
+    justify-content: center; /* Centra las marcas horizontalmente */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin: 30px 0; /* Margen superior e inferior */
+    padding: 0; /* Quita el padding interno */
+    list-style: none; /* Quita los puntos de lista */
+}
+
+.marcas li {
+    background-color: var(--color-fondo); /* Fondo de cada marca */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto de interacción */
+    text-align: center; /* Centra el texto */
+}
+
+.marcas li:hover {
+    transform: translateY(-5px); /* Desplaza ligeramente hacia arriba al pasar el mouse */
+    background-color: var(--color-hover); /* Cambia el fondo al pasar el mouse */
+}
+
+.marcas a {
+    text-decoration: none; /* Quita el subrayado */
+    color: var(--color-secundario); /* Color del texto */
+    font-weight: bold; /* Resalta el texto */
+    font-size: 1.2em; /* Tamaño de letra ligeramente mayor */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+}
+
+.marcas a:hover {
+    color: var(--color-texto-hover); /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Adaptación responsiva */
+@media (max-width: 768px) {
+    .marcas {
+        flex-direction: column; /* Cambia a formato vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos en formato vertical */
+    }
+
+    .marcas li {
+        width: 80%; /* Asegura que los elementos no sean demasiado grandes en pantallas pequeñas */
+    }
+}
+/* Contenedor principal */
+.catalogo-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding: 80px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+/* Sección de catálogo */
+.catalogo {
+    flex: 1;
     text-align: center;
-    font-size: 14px;
-    color: #555; /* Color del texto */
 }
 
+.catalogo p {
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+.catalogo a {
+    text-decoration: none;
+}
+
+.catalogo img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.catalogo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Sección de redes sociales */
+.redes {
+    flex: 1;
+    text-align: center;
+}
+
+.redes p {
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+.redes ul {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    list-style: none;
+}
+
+.redes li {
+    display: inline-block;
+}
+
+.redes a {
+    color: var(--color-secundario);
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes a:hover {
+    transform: scale(1.2);
+    color: var(--color-hover);
+}
+
+/* Adaptación responsiva */
+@media (max-width: 768px) {
+    .catalogo-redes {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .catalogo img,
+    .redes a {
+        margin: auto;
+    }
+}
+/* Íconos de redes sociales */
+.redes a svg {
+    width: 150px; /* Igual que la imagen del catálogo */
+    height: 150px; /* Proporción cuadrada */
+    border-radius: 8px; /* Opcional, para redondear bordes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.redes a svg:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* Estilo del footer */
+footer {
+    background-color: var(--color-fondo); /* Color de fondo consistente con la página */
+    color: var(--color-secundario); /* Texto del color secundario */
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1); /* Separador sutil */
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Texto del footer */
 footer p {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
-footer .contact-info {
-    margin-top: 10px;
-}
-
+/* Enlaces en el footer */
 footer a {
-    color: #ff6600; /* Color del enlace, para destacar */
-    text-decoration: none;
+    color: var(--color-secundario); /* Color del texto en los enlaces */
+    text-decoration: none; /* Quitar subrayado */
     font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Hover en enlaces */
 footer a:hover {
-    text-decoration: underline;
-}
-.marcas li a {
-    color: #08080899; /* Color personalizado para enlaces */
-    font-weight: bold;
-    text-decoration: none;
+    color: var(--color-hover); /* Color en hover */
+    transform: scale(1.1); /* Ligeramente más grande */
 }
 
-.marcas li a:hover {
-    text-decoration: underline;
+/* Adaptación responsiva */
+@media (max-width: 768px) {
+    footer p {
+        font-size: 1rem;
+    }
+    footer a {
+        margin: 0 5px;
+    }
 }
+
 
