@@ -161,8 +161,6 @@ h2, h3 {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 /* Contenedor principal del listado */
 ol {
     display: grid;
@@ -181,6 +179,12 @@ ol li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen y el texto estén en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del tamaño */
 }
 
 /* Efecto hover en los elementos */
@@ -193,10 +197,13 @@ ol li:hover {
 ol li a {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centra el contenido dentro del enlace */
     text-decoration: none;
     color: var(--color-secundario);
     padding: 20px;
+    width: 100%; /* Asegura que el enlace ocupe todo el ancho del li */
+    height: 100%; /* Asegura que el enlace ocupe todo el alto del li */
+    box-sizing: border-box;
     transition: color 0.3s ease;
 }
 
@@ -213,6 +220,7 @@ ol li img {
     transition: transform 0.3s ease;
 }
 
+/* Efecto hover en las imágenes */
 ol li img:hover {
     transform: scale(1.05); /* Ligeramente más grande */
 }
@@ -233,13 +241,15 @@ ol li p {
     }
 
     ol li a {
-        padding: 15px;
+        padding: 15px; /* Ajusta el padding para pantallas pequeñas */
     }
 
     ol li p {
-        font-size: 1rem;
+        font-size: 1rem; /* Reduce el tamaño del texto en pantallas pequeñas */
     }
 }
+
+
 
 
 /* Contenedor principal */
@@ -353,6 +363,9 @@ ol li p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
     transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto de interacción */
     text-align: center; /* Centra el texto */
+    width: 200px; /* Asegura un tamaño consistente para cada marca */
+    /* Limita el tamaño de las marcas para que no se estiren demasiado en pantallas pequeñas */
+    max-width: 100%; /* Asegura que las marcas no se desborden */
 }
 
 .marcas li:hover {
@@ -381,9 +394,12 @@ ol li p {
     }
 
     .marcas li {
-        width: 80%; /* Asegura que los elementos no sean demasiado grandes en pantallas pequeñas */
+        width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
+        max-width: 300px; /* Limita el ancho máximo para evitar que las marcas sean demasiado grandes */
+        margin-bottom: 20px; /* Añade espacio entre los elementos */
     }
 }
+
 /* Contenedor principal */
 .catalogo-redes {
     display: flex;
